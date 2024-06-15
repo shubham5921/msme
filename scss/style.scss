@@ -1,0 +1,130 @@
+@import './basics';
+@import './header';
+@import './banner';
+@import './footer';
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+
+    img {
+        // height: 212px;
+        width: 373px;
+    }
+}
+
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 3rem;
+    justify-content: space-between;
+    padding: 0 !important;
+
+    li {
+        padding: 30px 10px;
+        width: calc((100% - 40px) / 4);
+        list-style-type: none !important;
+        text-align: center;
+        border: 1px solid #DCDCDC;
+        font-size: 20.48px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+
+        & + li {
+            margin-top: 0 !important;
+        }
+    }
+}
+
+.gallery-secondary {
+    padding: 0 !important;
+    li {
+        list-style-type: none !important;
+    }
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    justify-content: space-between;
+}
+
+.common-section {
+
+    .wrap {
+        display: flex;
+        margin-bottom: 40px;
+        .icon {
+            padding: 15px;
+            background-color: #ECECEC;
+        }
+
+        span {
+            background-color: #F79122;
+            color: #fff;
+            width: 50%;
+            font-weight: bold;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+            font-size: 29px;
+            display: flex;
+            align-items: center;
+            padding: 15px 20px;
+        }
+    }
+
+    & + .common-section {
+        margin-top: 116px;
+    }
+    h3 {
+        line-height: 80px;
+        font-weight: bold;
+        color: #2C27C2;
+        margin-bottom: 56px;
+        font-size: 45px;
+    }
+
+    p {
+        line-height: 40px;
+        font-weight: 300;
+        font-size: 24px;
+        color: #000000;
+
+        & + p {
+            margin-top: 16px;
+        }
+    }
+
+    ul {
+        padding-left: 24px;
+        li {
+            list-style-type: disc;
+            line-height: 40px;
+            font-weight: 300;
+            font-size: 24px;
+            color: #000000;
+
+            & + li {
+                margin-top: 16px;
+            }
+        }
+    }
+}
+
+.floating-button {
+    position: fixed;
+    font-size: 24px;
+    z-index: 99;
+    padding: 12px 20px;
+    color: #FFFFFF;
+    border-radius: 0 0 8px 8px;
+    font-weight: bold;
+    background-color: #F79122;
+    line-height: normal;
+    right: -109px;
+    top: 50%;
+    transform: translateY(-50%) rotate(90deg);
+}

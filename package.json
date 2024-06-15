@@ -1,0 +1,52 @@
+{
+  "name": "pune-mirror",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./src/index.ts",
+  "scripts": {
+    "start": "nodemon",
+    "start:prod": "node dist/index.js",
+    "start:scss": "sass --watch scss:public/css/",
+    "build": "tsc && cp -r views dist && cp .env dist && cp -r public dist",
+    "build:css": "sass --load-path=node_modules/sass --style=expanded --source-map --embed-source-map --precision 6 scss:public/css/"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.540.0",
+    "@types/moment": "^2.13.0",
+    "connect-mongo": "^3.2.0",
+    "cookie-parser": "~1.4.4",
+    "cors": "^2.8.5",
+    "debug": "~2.6.9",
+    "dotenv": "^16.0.1",
+    "ejs": "~2.6.1",
+    "express": "~4.16.1",
+    "express-session": "^1.17.3",
+    "fs": "^0.0.1-security",
+    "http-errors": "~1.6.3",
+    "lodash": "^4.17.21",
+    "moment": "^2.29.4",
+    "mongoose": "^6.5.0",
+    "morgan": "~1.9.1",
+    "node-stream-zip": "^1.15.0",
+    "pdfjs-dist": "2.6",
+    "sass": "^1.72.0",
+    "sass-loader": "^14.1.1",
+    "sass-middleware": "0.0.3",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.7.4",
+    "winston": "^3.8.1",
+    "yarn": "^1.22.19"
+  },
+  "devDependencies": {
+    "@types/cookie-parser": "^1.4.3",
+    "@types/cors": "^2.8.12",
+    "@types/express": "^4.17.13",
+    "@types/express-session": "^1.17.5",
+    "@types/lodash": "^4.14.182",
+    "@types/morgan": "^1.9.3",
+    "nodemon": "^2.0.19"
+  }
+}

@@ -1,0 +1,10 @@
+<%if(seoData.description){%>
+  <meta name="description" content="<%= seoData.description %>">
+<% } %>
+<% seoData.metaTags && seoData.metaTags.forEach(function(seo){ %>
+  <meta name="keywords" <% if(seo.property) {%> property="<%= seo.property %>"<% } %>
+
+  <% if(seo.name) { %>name="<%= seo.name %>"<% } %>
+  <% if(seo.content){ %>  content="<%= seo.content %>"  <% } %> >
+<% }) %>
+<meta name="robots" content="max-image-preview:large">

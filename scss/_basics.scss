@@ -1,0 +1,48 @@
+@import './variables';
+
+html {
+    overflow-x: hidden;
+  }
+  
+  body {
+    font-family: $primaryFont;
+    background: #fff;
+    color: $black;
+    font-size: 16px;
+    font-weight: 400;
+  }
+  
+  a {
+    text-decoration: none;
+  
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    margin: 0;
+    line-height: 160%;
+    font-weight: 400;
+  }
+  
+  ul,
+  ol {
+    padding: 0;
+    list-style: none;
+    margin: 0;
+    line-height: normal;
+    font-weight: 400;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+  }
